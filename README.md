@@ -10,10 +10,13 @@ Installation
     $ vim
 
 Inside Vim:
+
     :PluginInstall
 
 To update plugins:
+
     :PluginUpdate
 
 Clean plugins
+
     :PluginClean
