@@ -17,6 +17,6 @@ To update plugins:
 
     :PluginUpdate
 
-Clean plugins
+Clean plugins:
 
     :PluginClean
