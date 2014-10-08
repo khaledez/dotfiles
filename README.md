@@ -7,3 +7,13 @@ Installation
 =
     $ git clone https://github.com/khaledez/vimrc.git ~/vim
     $ ln -s ~/vim/vimrc ~/.vimrc
+    $ vim
+
+Inside Vim:
+    :PluginInstall
+
+To update plugins:
+    :PluginUpdate
+
+Clean plugins
+    :PluginClean
