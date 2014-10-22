@@ -9,7 +9,7 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " Color schema
-Plugin 'wombat256.vim'
+Plugin 'altercation/vim-colors-solarized'
 
 " Powerline
 Plugin 'Lokaltog/powerline'
@@ -25,16 +25,13 @@ set encoding=utf-8
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
-" Show whitespace
-" MUST be inserted BEFORE the colorscheme command
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-au InsertLeave * match ExtraWhitespace /\s\+$/
-
 "
-" Color scheme
+" Color scheme 
+" Get Mac Terminal Colors from:
+" https://github.com/tomislav/osx-terminal.app-colors-solarized
 "
-set t_Co=256
-color wombat256mod
+set background=dark
+colorscheme solarized
 
 " Mouse and backspace
 set mouse=a  " on OSX press ALT and click

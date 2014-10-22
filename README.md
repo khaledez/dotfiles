@@ -7,7 +7,7 @@ Installation
 ============
     $ git clone --recursive https://github.com/khaledez/vimrc.git ~/.vim
     $ ln -s ~/.vim/vimrc ~/.vimrc
-    $ vim
+    $ vim +PluginInstall +qall
 
 Inside Vim:
 
