@@ -14,6 +14,9 @@ Plugin 'altercation/vim-colors-solarized'
 " Powerline
 Plugin 'Lokaltog/powerline'
 
+" Sytastics
+Plugin 'scrooloose/syntastic'
+
 " All of plugins must be added before the following line
 call vundle#end()
 
@@ -52,6 +55,7 @@ set softtabstop=2
 set shiftwidth=2
 set shiftround
 set expandtab
+set autoindent
 
 " Searching
 set hlsearch        " highlight matches
