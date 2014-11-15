@@ -33,12 +33,16 @@ autocmd! bufwritepost .vimrc source %
 " Get Mac Terminal Colors from:
 " https://github.com/tomislav/osx-terminal.app-colors-solarized
 "
+set t_Co=256
 set background=dark
 colorscheme solarized
 
 " Mouse and backspace
 set mouse=a  " on OSX press ALT and click
 set bs=2     " make backspace behave like normal again
+" Allow using backspace and del keys for indentations, lineendings and
+" linestarts
+set backspace=indent,eol,start
 
 " Showing line numbers and length
 set number  " show line numbers
@@ -103,3 +107,10 @@ vnoremap > >gv  " better indentation
 
 " Powerline
 set laststatus=2
+
+" Syntastic configuration
+let g:syntastic_enable_signs = 1
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+" Disable w3 syntax chcker. Horribly annoying on slow connections
+let g:syntastic_html_checkers=['tidy']

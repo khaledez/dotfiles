@@ -17,7 +17,5 @@ setlocal shiftround
 setlocal expandtab
 setlocal cindent
 
-
 " Syntastic
 let g:synatstic_php_checkers = ['php', 'phpcs', 'phpmd']
-let g:syntastic_aggregate_errors = 1
