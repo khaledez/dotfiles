@@ -1,3 +1,4 @@
+" Better php DocTags syntax
 hi! def link phpDocTags  phpDefine
 hi! def link phpDocParam phpType
 
