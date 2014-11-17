@@ -14,6 +14,9 @@ Plugin 'altercation/vim-colors-solarized'
 " Powerline
 Plugin 'Lokaltog/powerline'
 
+" PHP Support
+Plugin 'StanAngeloff/php.vim'
+
 " Sytastics
 Plugin 'scrooloose/syntastic'
 

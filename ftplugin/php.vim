@@ -1,14 +1,5 @@
-" Language: PHP
- 
-if exists("b:did_ftplugin") | finish | endif
-let b:did_ftplugin = 1
-
-setlocal include=\\\(require\\\|include\\\)\\\(_once\\\)\\\?
-setlocal iskeyword+=$
-setlocal formatoptions-=t
-setlocal formatoptions+=croql
-setlocal comments=sr:/*,mb:*,ex:*/,://,b:#
-setlocal define=define
+hi! def link phpDocTags  phpDefine
+hi! def link phpDocParam phpType
 
 setlocal tabstop=4
 setlocal softtabstop=4
