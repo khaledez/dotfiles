@@ -12,14 +12,17 @@ Plugin 'gmarik/vundle'
 Plugin 'altercation/vim-colors-solarized'
 
 " Powerline
-Plugin 'Lokaltog/powerline'
-
-" PHP Support
-Plugin 'StanAngeloff/php.vim'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Sytastics
 Plugin 'scrooloose/syntastic'
 
+" YouCompleteMe
+" After Install:
+" $ cd ~/.vim/bundle/YouCompleteMe
+" $ ./install.sh --clang-completer
+Plugin 'Valloric/YouCompleteMe'
+'
 " All of plugins must be added before the following line
 call vundle#end()
 
@@ -27,6 +30,7 @@ call vundle#end()
 filetype plugin indent on
 syntax on
 set encoding=utf-8
+set termencoding=utf-8
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -85,9 +89,9 @@ let mapleader = ","
 " Bind nohl
 " Removes highlight of your last search
 " ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
-noremap <C-n> :nohl<CR>
-vnoremap <C-n> :nohl<CR>
-inoremap <C-n> :nohl<CR>
+"noremap <C-n> :nohl<CR>
+"vnoremap <C-n> :nohl<CR>
+"inoremap <C-n> :nohl<CR>
 
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
 " Every unnecessary keystroke that can be saved is good for your health :)
@@ -109,7 +113,12 @@ vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 
 " Powerline
+" NOTE: Don't forget to install a font and configure the terminal to use it
+" I prefer DejavuSansMono 
+" https://github.com/Lokaltog/powerline-fonts
 set laststatus=2
+let g:Powerline_symbols='fancy'
+set fillchars+=stl:\ ,stlnc:\
 
 " Syntastic configuration
 let g:syntastic_enable_signs = 1
