@@ -17,12 +17,9 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Sytastics
 Plugin 'scrooloose/syntastic'
 
-" YouCompleteMe
-" After Install:
-" $ cd ~/.vim/bundle/YouCompleteMe
-" $ ./install.sh --clang-completer
-Plugin 'Valloric/YouCompleteMe'
-'
+" Gradle syntax support
+Plugin 'tfnico/vim-gradle'
+
 " All of plugins must be added before the following line
 call vundle#end()
 
