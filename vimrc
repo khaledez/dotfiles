@@ -82,7 +82,7 @@ set noswapfile
 " it is next to ``m`` and ``n`` which I use for navigating between tabs.
 let mapleader = ","
 
-" Copy to clipboard for Max
+" Copy to clipboard for Mac
 map <leader>c :w !pbcopy<CR><CR>
 
 " Bind nohl
