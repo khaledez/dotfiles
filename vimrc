@@ -71,7 +71,7 @@ set incsearch       " incremental searching
 set ignorecase      " searches are case insensitive...
 set smartcase       " ... unless they contain at least one capital letter
 
-" Disable stupid backup and swap files - they trigger too many events
+" Disable backup and swap files - they trigger too many events
 " for file system watchers
 set nobackup
 set nowritebackup
@@ -82,6 +82,8 @@ set noswapfile
 " it is next to ``m`` and ``n`` which I use for navigating between tabs.
 let mapleader = ","
 
+" Copy to clipboard for Max
+map <leader>c :w !pbcopy<CR><CR>
 
 " Bind nohl
 " Removes highlight of your last search
