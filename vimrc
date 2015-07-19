@@ -11,15 +11,6 @@ Plugin 'gmarik/vundle'
 " Color schema
 Plugin 'altercation/vim-colors-solarized'
 
-" Powerline
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
-" Sytastics
-Plugin 'scrooloose/syntastic'
-
-" Gradle syntax support
-Plugin 'tfnico/vim-gradle'
-
 " All of plugins must be added before the following line
 call vundle#end()
 
