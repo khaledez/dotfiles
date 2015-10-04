@@ -1,12 +1,14 @@
-vimrc
+Dot Files
 =====
-
-My .vimrc configuration
 
 Installation
 ============
-    $ git clone --recursive https://github.com/khaledez/vimrc.git ~/.vim
-    $ ln -s ~/.vim/vimrc ~/.vimrc
+    $ git clone --recursive https://github.com/khaledez/dotfiles.git ~/.dotfiles
+
+VIM
+============
+    $ ln -s ~/.dotfiles/vim ~/.vim
+    $ ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
     $ vim +PluginInstall +qall
 
 Inside Vim:
