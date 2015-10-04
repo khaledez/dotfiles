@@ -4,7 +4,7 @@ Dot Files
 Installation
 ============
     $ git clone https://github.com/khaledez/dotfiles.git ~/.dotfiles
-    $ chmod +x ~/.dotfile/install && ~/.dotfiles/install
+    $ chmod +x ~/.dotfiles/install && ~/.dotfiles/install
 
 VIM
 ============
