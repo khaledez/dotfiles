@@ -109,10 +109,3 @@ vnoremap > >gv  " better indentation
 set laststatus=2
 let g:Powerline_symbols='fancy'
 set fillchars+=stl:\ ,stlnc:\
-
-" Syntastic configuration
-let g:syntastic_enable_signs = 1
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-" Disable w3 syntax chcker. Horribly annoying on slow connections
-let g:syntastic_html_checkers=['tidy']
