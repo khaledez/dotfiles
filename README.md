@@ -3,13 +3,12 @@ Dot Files
 
 Installation
 ============
-    $ git clone --recursive https://github.com/khaledez/dotfiles.git ~/.dotfiles
+    $ git clone https://github.com/khaledez/dotfiles.git ~/.dotfiles
+    $ chmod +x ~/.dotfile/install && ~/.dotfiles/install
 
 VIM
 ============
-    $ ln -s ~/.dotfiles/vim ~/.vim
-    $ ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
-    $ vim +PluginInstall +qall
+I'm using Vundle for plugin management.
 
 Inside Vim:
 

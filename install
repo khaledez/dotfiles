@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+DIR=${0:a:h}
+
+# VIM
+if [[ ! -d $DIR/vim/bundle ]]; then
+  mkdir -p $DIR/vim/bundle
+  git clone --depth 1 git://github.com/gmarik/vundle.git $DIR/vim/bundle/vundle
+  ln -s ~/.dotfiles/vim ~/.vim
+fi
+
+vim +PluginInstall +qall
+
