@@ -105,7 +105,7 @@ vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 
 " Powerline
-" NOTE: Don't forget to install a font and configure the terminal to use it
+" NOTE: You can install a font and configure the terminal to use it
 " I prefer DejavuSansMono 
 " https://github.com/Lokaltog/powerline-fonts
 set laststatus=2
