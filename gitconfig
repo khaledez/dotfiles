@@ -1,0 +1,19 @@
+[user]
+	email = ezzughayyar@gmail.com
+	name = Khaled Zughayyar
+[color]
+	ui = true
+[core]
+	editor = vim
+[push]
+	default = simple
+[alias]
+	st = status
+	lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' 
+	br = branch
+	co = checkout
+  ci = commit
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
