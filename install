@@ -4,6 +4,10 @@ from os import path
 from subprocess import call
 
 DIR = path.dirname(path.realpath(__file__))
+HOME = path.expanduser("~")
+
+# GIT
+call(['ln', '-s', "{}/gitconfig".format(DIR), "{}/.gitconfig".format(HOME)])
 
 # VIM
 if not path.isdir("{}/vim/bundle".format(DIR)):
@@ -11,6 +15,6 @@ if not path.isdir("{}/vim/bundle".format(DIR)):
   call(['git', 'clone', '--depth', '1', 
     'git://github.com/gmarik/vundle.git',
     "{}/vim/bundle/vundle".format(DIR)])
-  call(['ln', '-s', "{}/vim".format(DIR), "{}/.vim".format(path.expanduser("~"))])
+  call(['ln', '-s', "{}/vim".format(DIR), "{}/.vim".format(HOMe)])
 
 call(['vim', '+PluginInstall', '+qall'])
