@@ -1,13 +1,16 @@
-#!/bin/zsh
+#!/usr/bin/env python
 
-DIR=${0:a:h}
+from os import path
+from subprocess import call
+
+DIR = path.dirname(path.realpath(__file__))
 
 # VIM
-if [[ ! -d $DIR/vim/bundle ]]; then
-  mkdir -p $DIR/vim/bundle
-  git clone --depth 1 git://github.com/gmarik/vundle.git $DIR/vim/bundle/vundle
-  ln -s ~/.dotfiles/vim ~/.vim
-fi
+if not path.isdir("{}/vim/bundle".format(DIR)):
+  call(['mkdir', '-p', "{}/vim/bundle".format(DIR)])
+  call(['git', 'clone', '--depth', '1', 
+    'git://github.com/gmarik/vundle.git',
+    "{}/vim/bundle/vundle".format(DIR)])
+  call(['ln', '-s', "{}/vim".format(DIR), "{}/.vim".format(path.expanduser("~"))])
 
-vim +PluginInstall +qall
-
+call(['vim', '+PluginInstall', '+qall'])

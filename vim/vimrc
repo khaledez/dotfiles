@@ -27,10 +27,12 @@ autocmd! bufwritepost .vimrc source %
 " Color scheme 
 " Get Mac Terminal Colors from:
 " https://github.com/tomislav/osx-terminal.app-colors-solarized
-"
+" Get Elementary OS Coloers from:
+" https://gist.github.com/matiasleidemer/24a32d80e8409984557e
 set t_Co=256
 set background=dark
 colorscheme solarized
+
 
 " Mouse and backspace
 set mouse=a  " on OSX press ALT and click
