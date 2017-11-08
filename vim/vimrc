@@ -27,8 +27,10 @@ autocmd! bufwritepost .vimrc source %
 " Color scheme 
 " Get Mac Terminal Colors from:
 " https://github.com/tomislav/osx-terminal.app-colors-solarized
-" Get Elementary OS Coloers from:
+" Get Elementary OS colors from:
 " https://gist.github.com/matiasleidemer/24a32d80e8409984557e
+" Get Ubuntu Gnome Terminal colors from:
+" https://github.com/Anthony25/gnome-terminal-colors-solarized
 set t_Co=256
 set background=dark
 colorscheme solarized
