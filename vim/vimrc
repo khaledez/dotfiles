@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
 " Manage Vundle by Vundle
-Plugin 'gmarik/vundle'
+"Plugin 'gmarik/vundle'
 
 " Color schema
 Plugin 'altercation/vim-colors-solarized'
@@ -31,7 +31,7 @@ autocmd! bufwritepost .vimrc source %
 " https://gist.github.com/matiasleidemer/24a32d80e8409984557e
 set t_Co=256
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 
 " Mouse and backspace
