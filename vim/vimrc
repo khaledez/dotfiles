@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
 " Manage Vundle by Vundle
-Plugin 'gmarik/vundle'
+"Plugin 'gmarik/vundle'
 
 " Color schema
 "Plugin 'altercation/vim-colors-solarized'
