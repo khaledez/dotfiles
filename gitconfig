@@ -1,6 +1,6 @@
 [user]
-	email = ezzughayyar@gmail.com
-	name = Khaled Zughayyar
+	email = khaled.ezzughayyar@kooltra.com
+	name = Khaled Ez Zughayyar
 [color]
 	ui = true
 [core]
@@ -14,6 +14,17 @@
 	co = checkout
   ci = commit
 [diff]
-  tool = vimdiff
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 [difftool]
   prompt = false
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
