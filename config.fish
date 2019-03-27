@@ -10,5 +10,5 @@ alias dcup="docker-compose up -d"
 alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
 
 # Java
-set -x JAVA_HOME (/usr/libexec/java_home -v 1.8)
+set -x JAVA_HOME (/usr/libexec/java_home)
 
