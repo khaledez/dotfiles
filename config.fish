@@ -1,6 +1,3 @@
-# Theme Config
-set -g theme_powerline_fonts no
-
 # Docker compose
 alias dc="docker-compose"
 alias dcup="docker-compose up -d"
