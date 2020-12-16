@@ -1,6 +1,7 @@
 [user]
 	email = ezzughayyar@gmail.com
-	name = Khaled Ez Zughayyar
+	name = Khaled Ezzughayyar
+	signingkey = 8D3DE83AB1F660B7
 [color]
 	ui = true
 [core]
@@ -8,11 +9,13 @@
 [push]
 	default = current
 [alias]
-	st = status
+	st = status -sb
 	lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' 
 	br = branch
 	co = checkout
   ci = commit
+	cm = commit -m
+	rv = remote -v
 [diff]
   tool = vscode
 [difftool "vscode"]
@@ -30,3 +33,5 @@
 	required = true
 [mergetool]
 	keepBackup = false
+[help]
+	autocorrect = 10

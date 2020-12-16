@@ -36,5 +36,4 @@ fi
 alias dc="docker-compose"
 alias dcup="docker-compose up -d"
 
-# rbenv
-eval "$(rbenv init -)"
+if [ -e /Users/khaled/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/khaled/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
