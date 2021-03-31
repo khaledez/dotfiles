@@ -15,21 +15,14 @@ set -g fish_user_paths $HOME/.cargo/bin $fish_user_paths
 # haskell
 set -g fish_user_paths $HOME/.cabal/bin $HOME/.local/bin $HOME/.ghcup/bin $fish_user_paths
 
+# deno
+set -g fish_user_paths $HOME/.deno/bin $fish_user_paths
+
 # nix
 if test -e /Users/khaled/.nix-profile/etc/profile.d/nix.sh
   bass export NIX_IGNORE_SYMLINK_STORE=1
   bass source /Users/khaled/.nix-profile/etc/profile.d/nix.sh
 end
-
-# flutter
-set -g fish_user_paths $fish_user_paths $HOME/Library/flutter/bin
-
-# PostgreSQL
-set -g PGDATA /usr/local/var/pgsql
-set -g fish_user_paths /usr/local/pgsql/bin $fish_user_paths
-
-# rbenv
-status --is-interactive; and source (rbenv init -|psub)
 
 # Snazzy color theme
 set -l sz_fgColor eff0eb
@@ -47,3 +40,7 @@ set fish_color_error $sz_red
 set fish_color_quote $sz_yellow
 set fish_color_param $sz_blue
 
+
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/__tabtab.fish ]; and . ~/.config/tabtab/__tabtab.fish; or true
