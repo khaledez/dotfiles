@@ -9,12 +9,6 @@ set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths
 # GOPATH
 set -g fish_user_paths $fish_user_paths "$HOME/go/bin"
 
-# rust
-set -g fish_user_paths $HOME/.cargo/bin $fish_user_paths
-
-# haskell
-set -g fish_user_paths $HOME/.cabal/bin $HOME/.local/bin $HOME/.ghcup/bin $fish_user_paths
-
 # deno
 set -g fish_user_paths $HOME/.deno/bin $fish_user_paths
 
@@ -40,7 +34,3 @@ set fish_color_error $sz_red
 set fish_color_quote $sz_yellow
 set fish_color_param $sz_blue
 
-
-# tabtab source for packages
-# uninstall by removing these lines
-[ -f ~/.config/tabtab/__tabtab.fish ]; and . ~/.config/tabtab/__tabtab.fish; or true
