@@ -37,3 +37,5 @@
 	keepBackup = false
 [help]
 	autocorrect = 10
+[pull]
+	ff = only
