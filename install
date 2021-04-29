@@ -9,6 +9,9 @@ HOME = path.expanduser("~")
 # GIT
 call(['ln','-f', '-s', "{}/gitconfig".format(DIR), "{}/.gitconfig".format(HOME)])
 
+# DIG
+call(['ln', '-f', '-s', "{}/digrc".format(DIR), "{}/.digrc".format(HOME)])
+
 # VIM
 if not path.isdir("{}/vim/bundle".format(DIR)):
   call(['mkdir', '-p', "{}/vim/bundle".format(DIR)])

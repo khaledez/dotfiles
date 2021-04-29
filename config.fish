@@ -4,7 +4,7 @@ alias dcup="docker-compose up -d"
 
 # brew
 alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths
 
 # GOPATH
 set -g fish_user_paths $fish_user_paths "$HOME/go/bin"
