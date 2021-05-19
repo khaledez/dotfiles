@@ -39,3 +39,5 @@
 	autocorrect = 10
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
