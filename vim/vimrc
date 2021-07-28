@@ -8,11 +8,9 @@ call vundle#begin()
 " Manage Vundle by Vundle
 Plugin 'gmarik/vundle'
 
-" VIM-Go
-" Plugin 'fatih/vim-go'
+Plugin 'scrooloose/syntastic'
+Plugin 'stephpy/vim-yaml'
 
-" Color schema
-"Plugin 'altercation/vim-colors-solarized'
 
 " All of plugins must be added before the following line
 call vundle#end()

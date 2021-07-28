@@ -1,12 +1,14 @@
 [user]
 	email = ezzughayyar@gmail.com
 	name = Khaled Ezzughayyar
+
 [color]
 	ui = true
 [core]
 	editor = vim
 [push]
 	default = current
+	followTags = true
 [alias]
 	st = status -sb
 	lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' 
@@ -37,7 +39,7 @@
 	keepBackup = false
 [help]
 	autocorrect = 10
-[pull]
-	ff = only
 [init]
 	defaultBranch = main
+[pull]
+	rebase = false

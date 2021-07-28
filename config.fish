@@ -12,6 +12,11 @@ set -g fish_user_paths $fish_user_paths "$HOME/go/bin"
 # deno
 set -g fish_user_paths $HOME/.deno/bin $fish_user_paths
 
+# nix 
+if test -e '/Users/khaled/.nix-profile/etc/profile.d/nix.sh'
+  fenv source '/Users/khaled/.nix-profile/etc/profile.d/nix.sh'
+end
+
 # Snazzy color theme
 set -l sz_fgColor eff0eb
 set -l sz_bgColor 282a36
