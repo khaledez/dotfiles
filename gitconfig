@@ -43,3 +43,5 @@
 	defaultBranch = main
 [pull]
 	rebase = false
+[includeIf "gitdir:~/Projects/Upwork/"]
+  path = ~/.gitconfig.upwork

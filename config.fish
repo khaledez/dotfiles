@@ -1,22 +1,3 @@
-# Docker compose
-alias dc="docker-compose"
-alias dcup="docker-compose up -d"
-
-# brew
-alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
-set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths
-
-# GOPATH
-set -g fish_user_paths $fish_user_paths "$HOME/go/bin"
-
-# deno
-set -g fish_user_paths $HOME/.deno/bin $fish_user_paths
-
-# nix 
-if test -e '/Users/khaled/.nix-profile/etc/profile.d/nix.sh'
-  fenv source '/Users/khaled/.nix-profile/etc/profile.d/nix.sh'
-end
-
 # Snazzy color theme
 set -l sz_fgColor eff0eb
 set -l sz_bgColor 282a36
@@ -32,4 +13,21 @@ set fish_color_command $sz_green
 set fish_color_error $sz_red
 set fish_color_quote $sz_yellow
 set fish_color_param $sz_blue
+
+# Docker compose
+alias dc="docker-compose"
+alias dcup="docker-compose up -d"
+
+fish_add_path "$HOME/go/bin"
+fish_add_path "$HOME/.deno/bin"
+
+# nix 
+if test -e '/Users/khaled/.nix-profile/etc/profile.d/nix.sh'
+  fenv source '/Users/khaled/.nix-profile/etc/profile.d/nix.sh'
+end
+
+# brew
+alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
+fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/sbin
 
