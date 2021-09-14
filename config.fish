@@ -14,17 +14,21 @@ set fish_color_error $sz_red
 set fish_color_quote $sz_yellow
 set fish_color_param $sz_blue
 
-# Docker compose
+# Docker & Kubernetes
 alias dc="docker-compose"
 alias dcup="docker-compose up -d"
+alias k="kubectl"
 
 fish_add_path "$HOME/go/bin"
 fish_add_path "$HOME/.deno/bin"
 
 # nix 
-if test -e '/Users/khaled/.nix-profile/etc/profile.d/nix.sh'
-  fenv source '/Users/khaled/.nix-profile/etc/profile.d/nix.sh'
-end
+#if test -e '/Users/khaled/.nix-profile/etc/profile.d/nix.sh'
+#  fenv source '/Users/khaled/.nix-profile/etc/profile.d/nix.sh'
+#end
+
+# rust 
+fish_add_path "$HOME/.cargo/bin"
 
 # brew
 alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
