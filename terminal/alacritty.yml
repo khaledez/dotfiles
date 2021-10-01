@@ -1,16 +1,16 @@
 # font
 font:
   normal:
-    family: Cascadia Mono PL
-    style: Regular
+    family: Cascadia Mono
+    style: Light
 
   bold:
-    family: Cascadia Mono PL
-    style: Bold
+    family: Cascadia Mono
+    style: Regular
 
   italic:
-    family: Cascadia Mono PL
-    style: Italic
+    family: Cascadia Mono
+    style: LiteItalic
 
   size: 15
 
