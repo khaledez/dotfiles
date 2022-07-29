@@ -1,39 +1,24 @@
 # Load required mods
-autoload -U compaudit compinit promptinit
+autoload -U compaudit compinit
 
 # case-insensitive completion
 compinit
 zmodload -i zsh/complist
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
 
-# pure prompt theme
-# it needs to be installed first;
-# npm install -g pure-prompt
-promptinit
-prompt pure
-
 # brew
 if [[ `uname` == 'Darwin' ]]; then
-  alias brewp='brew pin'
-  alias brews='brew list -1'
-  alias brewsp='brew list --pinned'
-  alias bubo='brew update && brew outdated'
-  alias bubc='brew upgrade && brew cleanup'
-  alias bubu='bubo && bubc'
-
-  export PATH=/usr/local/sbin:$PATH
+  alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
 fi
 
 # Syntax hightlighting
 # Install it first:
 # Mac: brew install zsh-syntax-hightlighting
 # Ubuntu: sudo apt install zsh-syntax-highlighting
-if [[ `uname` == 'Darwin' ]]; then
-  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
 
 # Docker
 alias dc="docker-compose"
 alias dcup="docker-compose up -d"
 
-if [ -e /Users/khaled/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/khaled/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+export JAVA_HOME=$(/usr/libexec/java_home -v "11.0.13")
+export PATH=$PATH:$HOME/go/bin:$HOME/.deno/bin

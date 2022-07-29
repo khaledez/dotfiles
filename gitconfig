@@ -11,7 +11,7 @@
 	followTags = true
 [alias]
 	st = status -sb
-	lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' 
+	lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	br = branch
 	co = checkout
 	ci = commit
@@ -22,6 +22,7 @@
 	wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
 [diff]
 	tool = vscode
+	submodule = log
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
 [difftool]
@@ -44,4 +45,11 @@
 [pull]
 	rebase = false
 [includeIf "gitdir:~/Projects/Upwork/"]
-  path = ~/.gitconfig.upwork
+	path = ~/.gitconfig.upwork
+[includeIf "gitdir:~/Projects/BethesdaNet/"]
+	path = ~/.gitconfig.bethesda
+[url "git@github.com-ardanlabs:BethesdaNet/"]
+	insteadOf = "git@github.com:BethesdaNet/"
+
+[submodule]
+	recurse = true

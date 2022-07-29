@@ -22,11 +22,6 @@ alias k="kubectl"
 fish_add_path "$HOME/go/bin"
 fish_add_path "$HOME/.deno/bin"
 
-# nix 
-#if test -e '/Users/khaled/.nix-profile/etc/profile.d/nix.sh'
-#  fenv source '/Users/khaled/.nix-profile/etc/profile.d/nix.sh'
-#end
-
 # rust 
 fish_add_path "$HOME/.cargo/bin"
 
@@ -34,4 +29,19 @@ fish_add_path "$HOME/.cargo/bin"
 alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
+
+# Java
+set -gx JAVA_HOME "/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home"
+
+# Ruby (rbenv)
+status --is-interactive; and rbenv init - fish | source
+
+alias public_ip="dig +short txt ch whoami.cloudflare @1.1.1.1"
+
+# GNU Make
+fish_add_path /opt/homebrew/opt/make/libexec/gnubin
+
+# Bun
+set -Ux BUN_INSTALL "/Users/khaled/.bun"
+set -px --path PATH "/Users/khaled/.bun/bin"
 
