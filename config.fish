@@ -15,8 +15,8 @@ set fish_color_quote $sz_yellow
 set fish_color_param $sz_blue
 
 # Docker & Kubernetes
-alias dc="docker-compose"
-alias dcup="docker-compose up -d"
+alias dc="docker compose"
+alias dcup="docker compose up -d"
 alias k="kubectl"
 
 fish_add_path "$HOME/go/bin"

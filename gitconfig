@@ -16,6 +16,8 @@
 	co = checkout
 	ci = commit
 	cm = commit -m
+	sci = commit -S
+	scm = commit -S -m
 	cmf = commit --no-verify -m
 	amend = commit --amend
 	rv = remote -v
@@ -46,10 +48,6 @@
 	rebase = false
 [includeIf "gitdir:~/Projects/Upwork/"]
 	path = ~/.gitconfig.upwork
-[includeIf "gitdir:~/Projects/BethesdaNet/"]
-	path = ~/.gitconfig.bethesda
-[url "git@github.com-ardanlabs:BethesdaNet/"]
-	insteadOf = "git@github.com:BethesdaNet/"
 
 [submodule]
 	recurse = true
