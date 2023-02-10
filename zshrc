@@ -20,5 +20,4 @@ fi
 alias dc="docker-compose"
 alias dcup="docker-compose up -d"
 
-export JAVA_HOME=$(/usr/libexec/java_home -v "11.0.13")
 export PATH=$PATH:$HOME/go/bin:$HOME/.deno/bin
