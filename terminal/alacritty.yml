@@ -1,3 +1,7 @@
+env:
+  term: xterm-256color
+shell:
+  program: /opt/homebrew/bin/tmux
 window:
   dimensions:
     columns: 120
@@ -5,8 +9,8 @@ window:
   padding:
     x: 5
     y: 5
-  decorations: full
-  startup_mode: Maximized
+  decorations: buttonless
+  startup_mode: SimpleFullscreen
 
 font:
   normal:
@@ -21,7 +25,7 @@ font:
     family: Cascadia Mono
     style: LiteItalic
 
-  size: 15
+  size: 14
 
 # Colors (Snazzy)
 colors:
@@ -53,7 +57,7 @@ colors:
     white:   '0xf1f1f0'
 
 key_bindings:
-  - { key: N,         mods: Command,      action: SpawnNewInstance       }
+  - { key: N,         mods: Command,      action: CreateNewWindow        }
   - { key: Space,     mods: Alt,          chars: " "                     }
   - { key: Back, mods: Super, chars: "\x15" } # delete word/line
   - { key: Left,     mods: Alt,     chars: "\x1bb"                       } # one word left

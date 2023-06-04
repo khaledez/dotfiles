@@ -21,18 +21,13 @@ alias k="kubectl"
 
 fish_add_path "$HOME/go/bin"
 fish_add_path "$HOME/.deno/bin"
-
-# rust 
 fish_add_path "$HOME/.cargo/bin"
 
 # brew
 alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
-fish_add_path /opt/homebrew/bin
-fish_add_path /opt/homebrew/sbin
-
-# Ruby (rbenv)
-status --is-interactive; and rbenv init - fish | source
 
 # JetBrain scripts
 fish_add_path "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 
+# 1Password plugins
+source /Users/khaled/.op/plugins.sh

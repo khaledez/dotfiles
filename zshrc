@@ -16,8 +16,6 @@ fi
 # Mac: brew install zsh-syntax-hightlighting
 # Ubuntu: sudo apt install zsh-syntax-highlighting
 
-# Docker
-alias dc="docker-compose"
-alias dcup="docker-compose up -d"
+export PATH=$PATH:$HOME/go/bin:$HOME/.deno/bin:$HOME/.cargo/bin
 
-export PATH=$PATH:$HOME/go/bin:$HOME/.deno/bin
+eval "$(starship init zsh)"
