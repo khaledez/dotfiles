@@ -1,7 +1,7 @@
 env:
   term: xterm-256color
-shell:
-  program: /opt/homebrew/bin/tmux
+    #shell:
+    #program: /opt/homebrew/bin/tmux
 window:
   dimensions:
     columns: 120
