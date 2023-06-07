@@ -6,9 +6,16 @@ compinit
 zmodload -i zsh/complist
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
 
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+
+
 # brew
 if [[ `uname` == 'Darwin' ]]; then
-  alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
+  alias bubu="brew update; brew outdated; brew upgrade; brew cleanup"
 fi
 
 # Syntax hightlighting

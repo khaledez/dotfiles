@@ -14,6 +14,9 @@ set fish_color_error $sz_red
 set fish_color_quote $sz_yellow
 set fish_color_param $sz_blue
 
+# Prompt
+set fish_function_path $HOME/.dotfiles/fish-theme-ezan $fish_function_path 
+
 # Docker & Kubernetes
 alias dc="docker compose"
 alias dcup="docker compose up -d"
@@ -26,8 +29,8 @@ fish_add_path "$HOME/.cargo/bin"
 # brew
 alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
 
-# JetBrain scripts
-fish_add_path "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
-
-# 1Password plugins
-source /Users/khaled/.op/plugins.sh
+if status is-interactive 
+	# 1Password plugins
+	source $HOME/.config/op/plugins.sh
+	eval (/opt/homebrew/bin/brew shellenv)
+end
