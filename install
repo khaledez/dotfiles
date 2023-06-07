@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from os import path
 from subprocess import call
@@ -16,7 +16,7 @@ call(['ln', '-f', '-s', "{}/digrc".format(DIR), "{}/.digrc".format(HOME)])
 if not path.isdir("{}/vim/bundle".format(DIR)):
   call(['mkdir', '-p', "{}/vim/bundle".format(DIR)])
   call(['git', 'clone', '--depth', '1', 
-    'git://github.com/gmarik/vundle.git',
+    'git@github.com:VundleVim/Vundle.vim.git',
     "{}/vim/bundle/vundle".format(DIR)])
   call(['ln', '-f', '-s', "{}/vim".format(DIR), "{}/.vim".format(HOME)])
 
