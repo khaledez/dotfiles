@@ -9,8 +9,6 @@ window:
   padding:
     x: 5
     y: 5
-  decorations: buttonless
-  startup_mode: SimpleFullscreen
 
 font:
   normal:
