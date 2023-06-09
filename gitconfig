@@ -24,18 +24,15 @@
 	rv = remote -v
 	wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
 	upstream = !git branch --set-upstream-to=origin/"$(git rev-parse --abbrev-ref HEAD)"
+	d = difftool
 [diff]
-	tool = vscodium
+	tool = vimdiff
 	submodule = log
-[difftool "vscodium"]
-	cmd = codium --wait --diff $LOCAL $REMOTE
 [difftool]
 	prompt = false
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
-[mergetool "vscodium"]
-	cmd = codium --wait $MERGED
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
