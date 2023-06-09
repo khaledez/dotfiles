@@ -32,7 +32,8 @@
 [difftool]
 	prompt = false
 [merge]
-	tool = vscodium
+	tool = vimdiff
+	conflictstyle = diff3
 [mergetool "vscodium"]
 	cmd = codium --wait $MERGED
 [filter "lfs"]
@@ -42,6 +43,7 @@
 	required = true
 [mergetool]
 	keepBackup = false
+	prompt = false
 [help]
 	autocorrect = 10
 [init]
