@@ -39,4 +39,3 @@ if status is-interactive
 	eval (/opt/homebrew/bin/brew shellenv)
 end
 
-alias update="bubu; and nix profile upgrade '.*'; and nix-collect-garbage"
