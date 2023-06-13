@@ -1,17 +1,17 @@
-#!/usr/bin/env python3
+#!/bin/sh
 
-from os import path
-from subprocess import call
+set -e
 
-DIR = path.dirname(path.realpath(__file__))
-HOME = path.expanduser("~")
+cur_dir=$(dirname -- "$0")
 
-# GIT
-call(['ln','-f', '-s', "{}/gitconfig".format(DIR), "{}/.gitconfig".format(HOME)])
+ln -f -s "$cur_dir"/gitconfig "$HOME"/.gitconfig
 
-# DIG
-call(['ln', '-f', '-s', "{}/digrc".format(DIR), "{}/.digrc".format(HOME)])
+ln -f -s "$cur_dir"/digrc "$HOME"/.digrc
 
-# VIM
-call(['ln', '-f', '-s', "{}/vim".format(DIR), "{}/.vim".format(HOME)])
+ln -f -s "$cur_dir"/vim "$HOME/.vim"
+
+mkdir -p "$HOME/.config/fish"
+ln -f -s "$cur_dir"/config.fish "$HOME/.config/fish/config.fish"
+
+ln -f -s "$cur_dir"/zshrc "$HOME/.zshrc"
 
