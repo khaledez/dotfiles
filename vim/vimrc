@@ -1,20 +1,6 @@
 set nocompatible           " be iMproved
 filetype off
 
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle
-call vundle#begin()
-
-" Manage Vundle by Vundle
-Plugin 'gmarik/vundle'
-
-Plugin 'scrooloose/syntastic'
-Plugin 'stephpy/vim-yaml'
-
-
-" All of plugins must be added before the following line
-call vundle#end()
-
 "" General configuration
 filetype plugin indent on
 syntax on

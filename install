@@ -13,11 +13,5 @@ call(['ln','-f', '-s', "{}/gitconfig".format(DIR), "{}/.gitconfig".format(HOME)]
 call(['ln', '-f', '-s', "{}/digrc".format(DIR), "{}/.digrc".format(HOME)])
 
 # VIM
-if not path.isdir("{}/vim/bundle".format(DIR)):
-  call(['mkdir', '-p', "{}/vim/bundle".format(DIR)])
-  call(['git', 'clone', '--depth', '1', 
-    'git@github.com:VundleVim/Vundle.vim.git',
-    "{}/vim/bundle/vundle".format(DIR)])
-  call(['ln', '-f', '-s', "{}/vim".format(DIR), "{}/.vim".format(HOME)])
+call(['ln', '-f', '-s', "{}/vim".format(DIR), "{}/.vim".format(HOME)])
 
-call(['vim', '+PluginInstall', '+qall'])
