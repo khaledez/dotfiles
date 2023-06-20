@@ -22,6 +22,9 @@ fi
 # Install it first:
 # Mac: brew install zsh-syntax-hightlighting
 # Ubuntu: sudo apt install zsh-syntax-highlighting
+if [ -e '/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' ]; then
+	source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 export PATH=$PATH:$HOME/go/bin:$HOME/.deno/bin:$HOME/.cargo/bin
 
