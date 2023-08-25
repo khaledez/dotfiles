@@ -73,7 +73,7 @@ set noswapfile
 
 " Rebind <Leader> key
 " I like to have it here becuase it is easier to reach than the default and
-" it is next to ``m`` and ``n`` which I use for navigating between tabs.
+" it is next to ``m`` and ``n`` which I use for navigating between buffers.
 let mapleader = ","
 
 " Copy to clipboard for Mac
@@ -93,12 +93,6 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-
-" easier moving between tabs
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
-
-
 " easier moving of code blocks
 " Try to go into visual mode (v), thenselect several lines of code here and
 " then press ``>`` several times.
@@ -113,3 +107,32 @@ map <Leader>b :diffget BASE<CR>
 if has("patch-8.1.0360")
 	set diffopt+=internal,algorithm:patience
 endif
+
+" airline managing buffers
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" This allows buffers to be hidden if you've modified a buffer.
+" This is almost a must if you wish to use buffers in this way.
+set hidden
+
+" To open a new empty buffer
+" This replaces :tabnew which I used to bind to this mapping
+nmap <leader>T :enew<cr>
+
+" Move to the next buffer
+nmap <leader>m :bnext<CR>
+
+" Move to the previous buffer
+nmap <leader>n :bprevious<CR>
+
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>bq :bp <BAR> bd #<CR>
+
+" Show all open buffers and their status
+" :ls<CR>
+
