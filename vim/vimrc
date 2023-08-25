@@ -105,13 +105,6 @@ map <Leader>m <esc>:tabnext<CR>
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 
-" Powerline
-" NOTE: You can install a font and configure the terminal to use it
-" https://github.com/Lokaltog/powerline-fonts
-set laststatus=2
-let g:Powerline_symbols='fancy'
-set fillchars+=stl:\ ,stlnc:\
-
 " difftool
 map <Leader>l :diffget LOCAL<CR>
 map <Leader>r :diffget REMOTE<CR>
