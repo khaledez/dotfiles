@@ -16,7 +16,7 @@ alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
 
 if status is-interactive 
 	# 1Password plugins
-	source $HOME/.config/op/plugins.sh
+	source $HOME/.op/plugins.sh
 	eval (/opt/homebrew/bin/brew shellenv)
 end
 
