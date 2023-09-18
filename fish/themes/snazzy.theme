@@ -28,7 +28,8 @@ fish_color_escape 00a6b2
 fish_color_cwd green
 fish_color_cwd_root red
 fish_color_valid_path --underline
-fish_color_autosuggestion eff0eb
+fish_color_autosuggestion 737994
+
 fish_color_user brgreen
 fish_color_host normal
 fish_color_cancel -r
