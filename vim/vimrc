@@ -104,10 +104,6 @@ map <Leader>l :diffget LOCAL<CR>
 map <Leader>r :diffget REMOTE<CR>
 map <Leader>b :diffget BASE<CR>
 
-if has("patch-8.1.0360")
-	set diffopt+=internal,algorithm:patience
-endif
-
 " airline managing buffers
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1

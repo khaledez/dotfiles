@@ -2,7 +2,7 @@
 
 set -e
 
-cur_dir=$(dirname -- "$0")
+cur_dir=$(dirname -- "$(realpath "$0")")
 
 ln -f -s "$cur_dir"/gitconfig "$HOME"/.gitconfig
 
@@ -10,8 +10,11 @@ ln -f -s "$cur_dir"/digrc "$HOME"/.digrc
 
 ln -f -s "$cur_dir"/vim "$HOME/.vim"
 
-mkdir -p "$HOME/.config/fish"
-ln -f -s "$cur_dir"/config.fish "$HOME/.config/fish/config.fish"
+mkdir -p "$HOME/.config/fish/functions"
+mkdir -p "$HOME/.config/fish/themes"
+ln -f -s "$cur_dir/fish/config.fish" "$HOME/.config/fish/config.fish"
+ln -f -s "$cur_dir/fish/themes/snazzy.theme" "$HOME/.config/fish/themes/snazzy.theme"
+ln -f -s "$cur_dir/fish/functions/fish_prompt.fish" "$HOME/.config/fish/functions/fish_prompt.fish"
 
 ln -f -s "$cur_dir"/zshrc "$HOME/.zshrc"
 

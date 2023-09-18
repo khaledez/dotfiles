@@ -1,3 +1,11 @@
+function ezan-set-local
+  set -U EZAN_HOST_TYPE "local"
+end
+
+function ezan-set-remote
+  set -U EZAN_HOST_TYPE 'remote'
+end
+
 # fish theme: ezan
 # Display the following bits on the left:
 # * User & host (hidden by default, execute `ezan-remote`to show, `ezan-local` to hide)
@@ -41,10 +49,6 @@ function fish_prompt
     printf '(%d) ' $last_status
     set_color cyan
   end
-
-
-  # Add a newline before prompts
-  #echo -e ""
 
   # Display [user & host] when on remote host
   if [ "$EZAN_HOST_TYPE" = "remote" ]

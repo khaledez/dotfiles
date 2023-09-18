@@ -1,22 +1,3 @@
-# Snazzy color theme
-set -l sz_fgColor eff0eb
-set -l sz_bgColor 282a36
-set -l sz_red ff5c57
-set -l sz_green 5af78e
-set -l sz_yellow f3f99d
-set -l sz_blue 57c7ff
-set -l sz_magenta ff6ac1
-set -l sz_cyan 9aedfe
-
-set fish_color_normal $sz_fgColor
-set fish_color_command $sz_green
-set fish_color_error $sz_red
-set fish_color_quote $sz_yellow
-set fish_color_param $sz_blue
-
-# Prompt
-set fish_function_path $HOME/.dotfiles/fish-theme-ezan $fish_function_path 
-
 # Docker & Kubernetes
 alias dc="docker compose"
 alias dcup="docker compose up -d"
