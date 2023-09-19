@@ -28,13 +28,7 @@ function base16-snazzy -d "Snazzy"
   set colorfg $color07 # Base 05 - White
   set colorbg $color00 # Base 00 - Black
 
-  if test -n "$TMUX"
-    # Tell tmux to pass the escape sequences through
-    # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
-    function put_template; printf '\033Ptmux;\033\033]4;%d;rgb:%s\033\033\\\033\\' $argv; end;
-    function put_template_var; printf '\033Ptmux;\033\033]%d;rgb:%s\033\033\\\033\\' $argv; end;
-    function put_template_custom; printf '\033Ptmux;\033\033]%s%s\033\033\\\033\\' $argv; end;
-  else if string match 'screen*' $TERM # [ "${TERM%%[-.]*}" = "screen" ]
+  if string match 'screen*' $TERM # [ "${TERM%%[-.]*}" = "screen" ]
     # GNU screen (screen, screen-256color, screen-256color-bce)
     function put_template; printf '\033P\033]4;%d;rgb:%s\007\033\\' $argv; end;
     function put_template_var; printf '\033P\033]%d;rgb:%s\007\033\\' $argv; end;
@@ -87,11 +81,9 @@ function base16-snazzy -d "Snazzy"
     put_template_custom Pm 282a36 # cursor text
   else
     put_template_var 10 $colorfg
-    if [ "$BASE16_SHELL_SET_BACKGROUND" != false ]
-      put_template_var 11 $colorbg
-      if string match 'rxvt*' $TERM # [ "${TERM%%-*}" = "rxvt" ]
-        put_template_var 708 $colorbg # internal border (rxvt)
-      end
+    put_template_var 11 $colorbg
+    if string match 'rxvt*' $TERM # [ "${TERM%%-*}" = "rxvt" ]
+      put_template_var 708 $colorbg # internal border (rxvt)
     end
     put_template_custom 12 ";7" # cursor (reverse video)
   end
