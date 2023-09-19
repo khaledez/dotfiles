@@ -15,6 +15,7 @@ fish_add_path "$HOME/.cargo/bin"
 alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
 
 if status is-interactive 
+	base16-snazzy
 	# 1Password plugins
 	if [ -e "$HOME/.op/plugins.sh" ] 
 		source $HOME/.op/plugins.sh

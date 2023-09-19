@@ -13,8 +13,9 @@ ln -f -s "$cur_dir/vim" "$HOME/.vim"
 mkdir -p "$HOME/.config/fish/functions"
 mkdir -p "$HOME/.config/fish/themes"
 ln -f -s "$cur_dir/fish/config.fish" "$HOME/.config/fish/config.fish"
-ln -f -s "$cur_dir/fish/themes/snazzy.theme" "$HOME/.config/fish/themes/snazzy.theme"
-ln -f -s "$cur_dir/fish/functions/fish_prompt.fish" "$HOME/.config/fish/functions/fish_prompt.fish"
+for file in $(ls "$cur_dir/fish/functions"); do
+	ln -f -s "$cur_dir/fish/functions/$file" "$HOME/.config/fish/functions/$file"
+done
 
 ln -f -s "$cur_dir"/zshrc "$HOME/.zshrc"
 
