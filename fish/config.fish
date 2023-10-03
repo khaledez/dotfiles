@@ -12,7 +12,7 @@ fish_add_path "$HOME/.deno/bin"
 fish_add_path "$HOME/.cargo/bin"
 
 # brew
-alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
+alias bubu="brew update; and brew outdated; and brew upgrade --greedy; and brew cleanup"
 
 if status is-interactive 
 	base16-snazzy
