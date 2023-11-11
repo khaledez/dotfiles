@@ -3,10 +3,6 @@ alias dc="docker compose"
 alias dcup="docker compose up -d"
 alias k="kubectl"
 
-if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish' ] 
-	source '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish'
-end
-
 fish_add_path "$HOME/go/bin"
 fish_add_path "$HOME/.deno/bin"
 fish_add_path "$HOME/.cargo/bin"
