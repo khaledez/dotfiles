@@ -47,8 +47,6 @@
 	defaultBranch = main
 [pull]
 	rebase = false
-[includeIf "gitdir:~/Projects/topi/"]
-	path = ~/.gitconfig.topi
 [includeIf "gitdir:~/Projects/cloudsrc/"]
 	path = ~/.gitconfig.cloudsrc
 [submodule]
