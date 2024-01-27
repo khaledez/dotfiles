@@ -7,12 +7,16 @@ fish_add_path "$HOME/go/bin"
 fish_add_path "$HOME/.deno/bin"
 fish_add_path "$HOME/.cargo/bin"
 
-# brew
-alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
+if test "$(uname)" = "Darwin"
+	# brew
+	alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
+end
 
 if status is-interactive 
 	base16-snazzy
 
-	eval (/opt/homebrew/bin/brew shellenv)
+	if test "$(uname)" = "Darwin"
+		eval (/opt/homebrew/bin/brew shellenv)
+	end
 end
 
