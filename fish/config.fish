@@ -21,3 +21,7 @@ if status is-interactive
 	kubectl completion fish | source
 end
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

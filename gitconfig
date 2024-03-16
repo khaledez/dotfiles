@@ -9,6 +9,7 @@
 [push]
 	default = current
 	followTags = true
+	autoSetupRemote = true
 [alias]
 	st = status -s
 	lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
@@ -23,8 +24,6 @@
 	smend = commit -S --amend
 	rv = remote -v
 	wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
-	upstream = !git branch --set-upstream-to=origin/"$(git rev-parse --abbrev-ref HEAD)"
-	d = difftool
 [diff]
 	tool = vimdiff
 	submodule = log
