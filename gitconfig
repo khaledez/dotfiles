@@ -17,11 +17,8 @@
 	co = checkout
 	ci = commit
 	cm = commit -m
-	sci = commit -S
-	scm = commit -S -m
 	cmf = commit --no-verify -m
 	amend = commit --amend
-	smend = commit -S --amend
 	rv = remote -v
 	wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
 [diff]
@@ -53,3 +50,5 @@
 [includeIf "gitdir:~/Projects/Upwork/"]
 	path = ~/.gitconfig.upwork
 
+[commit]
+	gpgsign = true
