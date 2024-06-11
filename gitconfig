@@ -1,6 +1,7 @@
 [user]
 	email = ezzughayyar@gmail.com
 	name = Khaled Ezzughayyar
+	signingKey = 4A4A9C718C482B1A
 
 [color]
 	ui = true
