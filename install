@@ -19,3 +19,4 @@ done
 
 ln -f -s "$cur_dir"/zshrc "$HOME/.zshrc"
 
+ln -f -s "$cur_dir"/tmux.conf "$HOME/.tmux.conf"

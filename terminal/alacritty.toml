@@ -1,3 +1,7 @@
+[shell]
+program = "/opt/homebrew/bin/tmux"
+args = [ "new-session", "-A", "-D", "-s", "main" ]
+
 [colors.bright]
 black = "0x686868"
 blue = "0x57c7ff"
@@ -82,5 +86,6 @@ columns = 120
 lines = 34
 
 [window.padding]
-x = 5
-y = 5
+x = 3
+y = 3
+
