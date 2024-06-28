@@ -9,6 +9,7 @@ ln -f -s "$cur_dir"/gitconfig "$HOME"/.gitconfig
 ln -f -s "$cur_dir"/digrc "$HOME"/.digrc
 
 ln -f -s "$cur_dir/vim" "$HOME/.vim"
+ln -f -s "$cur_dir/nvim" "$HOME/.config/nvim"
 
 mkdir -p "$HOME/.config/fish/functions"
 mkdir -p "$HOME/.config/fish/themes"
