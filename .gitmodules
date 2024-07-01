@@ -1,6 +1,0 @@
-[submodule "vim-airline"]
-	path = vim/pack/dist/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline
-[submodule "vim-zig"]
-	path = vim/pack/plugins/start
-	url = https://github.com/ziglang/zig.vim
