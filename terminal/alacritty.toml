@@ -1,7 +1,3 @@
-[shell]
-program = "/opt/homebrew/bin/tmux"
-args = [ "new-session", "-A", "-D", "-s", "main" ]
-
 [colors.bright]
 black = "0x686868"
 blue = "0x57c7ff"
@@ -33,16 +29,16 @@ TERM = "xterm-256color"
 size = 14
 
 [font.bold]
-family = "Cascadia Mono"
-style = "Regular"
+family = "IBM Plex Mono"
+style = "Bold"
 
 [font.italic]
-family = "Cascadia Mono"
-style = "LiteItalic"
+family = "IBM Plex Mono"
+style = "Italic"
 
 [font.normal]
-family = "Cascadia Mono"
-style = "Light"
+family = "IBM Plex Mono"
+style = "Regular"
 
 [[keyboard.bindings]]
 action = "CreateNewWindow"
