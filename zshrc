@@ -1,5 +1,5 @@
 # Load required mods
-autoload -U compaudit compinit
+autoload -U compaudit compinit promptinit
 
 # case-insensitive completion
 compinit
@@ -20,4 +20,17 @@ if [ -e '/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
+# Pure prompt
+# Installation
+# Mac: brew install pure
+# npm: npm i -g pure-prompt
+if [[ `uname` == 'Darwin' ]]; then
+	fpath+=("$(brew --prefix)/share/zsh/site-functions")
+	promptinit
+	prompt pure
+fi
+promptinit
+prompt pure
+
 export PATH=$PATH:$HOME/go/bin:$HOME/.deno/bin:$HOME/.cargo/bin
+
