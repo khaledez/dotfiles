@@ -21,5 +21,3 @@ if [ -e '/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 export PATH=$PATH:$HOME/go/bin:$HOME/.deno/bin:$HOME/.cargo/bin
-
-eval "$(starship init zsh)"
