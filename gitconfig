@@ -45,8 +45,6 @@
 	rebase = false
 [submodule]
 	recurse = true
-[includeIf "gitdir:~/Projects/cloudsrc/"]
-	path = ~/.gitconfig.cloudsrc
 [includeIf "gitdir:~/Projects/Upwork/"]
 	path = ~/.gitconfig.upwork
 
