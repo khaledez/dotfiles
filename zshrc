@@ -12,6 +12,8 @@ if [[ `uname` == 'Darwin' ]]; then
   alias bubu="brew update; brew outdated; brew upgrade; brew cleanup"
 fi
 
+alias k=kubectl
+
 # Syntax hightlighting
 # Install it first:
 # Mac: brew install zsh-syntax-hightlighting
