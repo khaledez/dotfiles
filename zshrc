@@ -12,6 +12,8 @@ if [[ `uname` == 'Darwin' ]]; then
   alias bubu="brew update; brew outdated; brew upgrade; brew cleanup"
 fi
 
+alias dc="docker compose"
+alias dcup="docker compose up -d"
 alias k=kubectl
 
 # Syntax hightlighting
