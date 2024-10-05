@@ -1,7 +1,6 @@
 # Docker & Kubernetes
 alias dc="docker compose"
 alias dcup="docker compose up -d"
-alias k="kubectl"
 
 fish_add_path "$HOME/go/bin"
 fish_add_path "$HOME/.deno/bin"
@@ -18,10 +17,10 @@ if status is-interactive
 	if test "$(uname)" = "Darwin"
 		eval (/opt/homebrew/bin/brew shellenv)
 	end
-	kubectl completion fish | source
+
+	if command -q kubectl
+		alias k="kubectl"
+		kubectl completion fish | source
+	end
 end
 
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH

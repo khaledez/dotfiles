@@ -5,12 +5,9 @@ set -e
 cur_dir=$(dirname -- "$(realpath "$0")")
 
 ln -f -s "$cur_dir"/gitconfig "$HOME"/.gitconfig
-
 ln -f -s "$cur_dir"/digrc "$HOME"/.digrc
 
-ln -f -s "$cur_dir/vim" "$HOME/.vim"
-ln -f -s "$cur_dir/nvim" "$HOME/.config/nvim"
-
+# install fish
 mkdir -p "$HOME/.config/fish/functions"
 mkdir -p "$HOME/.config/fish/themes"
 ln -f -s "$cur_dir/fish/config.fish" "$HOME/.config/fish/config.fish"
@@ -20,4 +17,6 @@ done
 
 ln -f -s "$cur_dir"/zshrc "$HOME/.zshrc"
 
-ln -f -s "$cur_dir"/tmux.conf "$HOME/.tmux.conf"
+# vim
+mkdir -p "$HOME/.vim"
+ln -sf "$cur_dir/vimrc" "$HOME/.vim/vimrc"
