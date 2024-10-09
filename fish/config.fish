@@ -22,5 +22,9 @@ if status is-interactive
 		alias k="kubectl"
 		kubectl completion fish | source
 	end
+
+	if command -q direnv
+		direnv hook fish | source
+	end
 end
 
