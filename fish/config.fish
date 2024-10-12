@@ -1,3 +1,5 @@
+# supress greeting message
+set fish_greeting
 # Docker & Kubernetes
 alias dc="docker compose"
 alias dcup="docker compose up -d"
