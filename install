@@ -20,3 +20,10 @@ ln -f -s "$cur_dir"/zshrc "$HOME/.zshrc"
 # vim
 mkdir -p "$HOME/.vim"
 ln -sf "$cur_dir/vimrc" "$HOME/.vim/vimrc"
+
+# alacritty
+alacritty_dir="$HOME/.config/alacritty"
+mkdir -p "$alacritty_dir"
+if [ ! -f "$alacritty_dir/local.toml" ]; then
+	printf "[font]\nsize = 14\n" > "$alacritty_dir/local.toml"
+fi
