@@ -11,14 +11,11 @@ fish_add_path "$HOME/.cargo/bin"
 if test "$(uname)" = "Darwin"
 	# brew
 	alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
+	eval (/opt/homebrew/bin/brew shellenv)
 end
 
 if status is-interactive 
 	base16-snazzy
-
-	if test "$(uname)" = "Darwin"
-		eval (/opt/homebrew/bin/brew shellenv)
-	end
 
 	if command -q kubectl
 		alias k="kubectl"
@@ -27,6 +24,10 @@ if status is-interactive
 
 	if command -q direnv
 		direnv hook fish | source
+	end
+
+	if command -q fnm
+		fnm env | source
 	end
 end
 
