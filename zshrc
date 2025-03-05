@@ -39,3 +39,6 @@ prompt pure
 export PATH=$PATH:$HOME/go/bin:$HOME/.deno/bin:$HOME/.cargo/bin
 
 eval "$(fnm env --use-on-cd --shell zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/khaled/.lmstudio/bin"

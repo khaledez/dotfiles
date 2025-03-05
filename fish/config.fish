@@ -7,6 +7,7 @@ alias dcup="docker compose up -d"
 fish_add_path "$HOME/go/bin"
 fish_add_path "$HOME/.deno/bin"
 fish_add_path "$HOME/.cargo/bin"
+fish_add_path "$HOME/.lmstudio/bin"
 
 if test "$(uname)" = "Darwin"
 	# brew
@@ -31,3 +32,6 @@ if status is-interactive
 	end
 end
 
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :
