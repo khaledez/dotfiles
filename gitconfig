@@ -15,15 +15,17 @@
 	lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	br = branch
 	co = checkout
-	ci = commit
 	cm = commit -m
 	cmf = commit --no-verify -m
 	amend = commit --amend
-	rv = remote -v
 	wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
 [diff]
 	tool = vimdiff
 	submodule = log
+	algorithm = histogram
+	colorMoved = plain
+	renames = true
+	mnemonicPrefix = true
 [difftool]
 	prompt = false
 [merge]
@@ -38,7 +40,7 @@
 	keepBackup = false
 	prompt = false
 [help]
-	autocorrect = 10
+	autocorrect = prompt
 [init]
 	defaultBranch = main
 [pull]
@@ -47,9 +49,16 @@
 	recurse = true
 [commit]
 	gpgSign = true
+	verbose = true
 [tag]
 	gpgSign = true
+	sort = version:refname
 [gpg]
 	format = ssh
+[branch]
+	sort = -committerdate
 [includeIf "gitdir:~/tailormed/"]
     path = ~/tailormed/gitconfig
+[fetch]
+	prune = true
+	pruneTags = true
