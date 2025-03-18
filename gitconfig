@@ -58,8 +58,10 @@
 	format = ssh
 [branch]
 	sort = -committerdate
-[includeIf "gitdir:~/tailormed/"]
-    path = ~/tailormed/gitconfig
 [fetch]
 	prune = true
 	pruneTags = true
+
+[includeIf "gitdir:~/Projects/bitlab/"]
+	path = ~/Projects/bitlab/gitconfig
+
