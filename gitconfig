@@ -64,4 +64,5 @@
 
 [includeIf "gitdir:~/Projects/bitlab/"]
 	path = ~/Projects/bitlab/gitconfig
-
+[includeIf "gitdir:~/Projects/hunterdouglas/"]
+	path = ~/Projects/hunterdouglas/gitconfig
