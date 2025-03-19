@@ -66,3 +66,6 @@
 	path = ~/Projects/bitlab/gitconfig
 [includeIf "gitdir:~/Projects/hunterdouglas/"]
 	path = ~/Projects/hunterdouglas/gitconfig
+
+[url "ssh://git@bitbucket.org/"]
+	insteadOf = https://bitbucket.org/
