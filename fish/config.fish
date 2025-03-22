@@ -32,6 +32,3 @@ if status is-interactive
 	end
 end
 
-# Added by LM Studio CLI (lms)
-fish_add_path "$HOME/.cache/lm-studio/bin"
-
