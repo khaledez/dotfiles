@@ -1,8 +1,9 @@
 # supress greeting message
 set fish_greeting
 # Docker & Kubernetes
-alias dc="docker compose"
-alias dcup="docker compose up -d"
+alias docker="podman"
+alias dc="podman compose"
+alias dcup="podman compose up -d"
 
 fish_add_path "$HOME/go/bin"
 fish_add_path "$HOME/.deno/bin"
