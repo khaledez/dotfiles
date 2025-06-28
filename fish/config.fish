@@ -6,9 +6,7 @@ alias dc="podman compose"
 alias dcup="podman compose up -d"
 
 fish_add_path "$HOME/go/bin"
-fish_add_path "$HOME/.deno/bin"
 fish_add_path "$HOME/.cargo/bin"
-fish_add_path "$HOME/.lmstudio/bin"
 
 if test "$(uname)" = "Darwin"
 	# brew
