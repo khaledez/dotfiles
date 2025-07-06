@@ -62,10 +62,5 @@
 	prune = true
 	pruneTags = true
 
-[includeIf "gitdir:~/Projects/bitlab/"]
-	path = ~/Projects/bitlab/gitconfig
-[includeIf "gitdir:~/Projects/hunterdouglas/"]
-	path = ~/Projects/hunterdouglas/gitconfig
-
-[url "git@bitbucket.org:"]
-	insteadOf = https://bitbucket.org/
+[includeIf "gitdir:~/Bitlab/"]
+	path = ~/Bitlab/gitconfig
