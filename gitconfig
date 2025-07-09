@@ -64,3 +64,6 @@
 
 [includeIf "gitdir:~/Bitlab/"]
 	path = ~/Bitlab/gitconfig
+
+[safe]
+	directory = /Users/khaled/Projects/teachx.ai/sphinx
