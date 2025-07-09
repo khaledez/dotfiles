@@ -1,5 +1,8 @@
 # supress greeting message
 set fish_greeting
+# disable character globing (?)
+set fish_features qmark-noglob
+
 # Docker & Kubernetes
 alias dc="docker compose"
 alias dcup="docker compose up -d"
