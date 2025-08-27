@@ -30,7 +30,7 @@ if status is-interactive
 	end
 
 	if command -q fnm
-		fnm env | source
+		fnm env --corepack-enabled | source
 	end
 end
 
