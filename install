@@ -24,3 +24,6 @@ ln -sf "$cur_dir/vimrc" "$HOME/.vim/vimrc"
 # neovim
 ln -sf "$cur_dir/neovim" "$HOME/.config/nvim"
 
+# claude
+mkdir -p "$HOME/.claude"
+ln -sf "$cur_dir/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
