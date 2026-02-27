@@ -66,3 +66,6 @@
 	path = ~/Bitlab/gitconfig
 [includeIf "gitdir:~/Upwork/"]
 	path = ~/Upwork/gitconfig
+[includeIf "gitdir:~/coretava/"]
+	path = ~/coretava/gitconfig
+

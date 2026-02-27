@@ -5,7 +5,6 @@ set fish_features qmark-noglob
 
 # Docker & Kubernetes
 alias dc="docker compose"
-alias dcup="docker compose up -d"
 alias tf="terraform"
 
 fish_add_path "$HOME/go/bin"
