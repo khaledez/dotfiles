@@ -5,7 +5,7 @@
 [color]
 	ui = true
 [core]
-	editor = vim
+	editor = nvim
 	autocrlf = input
 [push]
 	default = current
@@ -66,6 +66,10 @@
 	path = ~/Bitlab/gitconfig
 [includeIf "gitdir:~/Upwork/"]
 	path = ~/Upwork/gitconfig
-[includeIf "gitdir:~/coretava/"]
-	path = ~/coretava/gitconfig
 
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential

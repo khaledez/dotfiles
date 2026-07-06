@@ -12,7 +12,7 @@ fish_add_path "$HOME/.cargo/bin"
 
 if test "$(uname)" = "Darwin"
 	# brew
-	alias bubu="brew update; and brew outdated; and brew upgrade; and brew cleanup"
+	alias bubu="brew update; and brew outdated; and brew upgrade -y; and brew cleanup"
 	eval (/opt/homebrew/bin/brew shellenv)
 end
 
@@ -33,3 +33,7 @@ if status is-interactive
 	end
 end
 
+
+if not contains $HOME/.local/bin $PATH
+    fish_add_path "$HOME/local/bin"
+end
